@@ -39,11 +39,11 @@
                     </image_cache>
                 </entities>
             </welance_kraken_resource>
-            <catalog>
+            <!--<catalog>
                 <rewrite>
                     <product_image>Welance_Kraken_Model_Product_Image</product_image>
                 </rewrite>
-            </catalog>
+            </catalog>-->
         </models>
         <events>
             <controller_action_predispatch_adminhtml_system_config_edit>
