@@ -23,7 +23,14 @@ class Welance_Kraken_Block_Product_Image extends Mage_Catalog_Block_Product_View
         $productImagesCount = count($productImages);
 
         foreach ($productImages as $productImage) {
-            $query .= "'%".$productImage."%'";
+          if(Mage::helper('core')->isModuleEnabled('Netzarbeiter_NicerImageNames')) {
+            $imageExt = '.' . end(explode('.', $productImage));Mage::log($imageExt);
+            $query .= "'%". str_replace($imageExt, '/', $productImage) ."%'";
+          } else {
+            $query .= "'%". $productImage ."%'";
+          }
+
+
 
             $i++;
 
