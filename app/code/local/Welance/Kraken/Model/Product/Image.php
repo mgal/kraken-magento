@@ -1,6 +1,6 @@
 <?php
 
-class Welance_Kraken_Model_Product_Image extends Mage_Catalog_Model_Product_Image
+class Welance_Kraken_Model_Product_Image extends Netzarbeiter_NicerImageNames_Model_Image
 {
 
     /**

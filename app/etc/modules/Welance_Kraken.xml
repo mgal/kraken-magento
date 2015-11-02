@@ -4,6 +4,7 @@
         <Welance_Kraken>
             <active>true</active>
             <codePool>local</codePool>
+            <depends>Netzarbeiter_NicerImageNames</depends>
         </Welance_Kraken>
     </modules>
 </config>
