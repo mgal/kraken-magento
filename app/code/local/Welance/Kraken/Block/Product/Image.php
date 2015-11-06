@@ -24,7 +24,7 @@ class Welance_Kraken_Block_Product_Image extends Mage_Catalog_Block_Product_View
 
         foreach ($productImages as $productImage) {
           if(Mage::helper('core')->isModuleEnabled('Netzarbeiter_NicerImageNames')) {
-            $imageExt = '.' . end(explode('.', $productImage));Mage::log($imageExt);
+            $imageExt = '.' . end(explode('.', $productImage));
             $query .= "'%". str_replace($imageExt, '/', $productImage) ."%'";
           } else {
             $query .= "'%". $productImage ."%'";
