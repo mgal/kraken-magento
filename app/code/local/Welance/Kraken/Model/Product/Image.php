@@ -1,6 +1,12 @@
 <?php
 
-class Welance_Kraken_Model_Product_Image extends Netzarbeiter_NicerImageNames_Model_Image
+if(Mage::helper('core')->isModuleEnabled('Netzarbeiter_NicerImageNames')) {
+  class KrakenFakeImageModel extends Netzarbeiter_NicerImageNames_Model_Image {}
+} else {
+  class KrakenFakeImageModel extends Mage_Catalog_Model_Product_Image {}
+}
+
+class Welance_Kraken_Model_Product_Image extends KrakenFakeImageModel
 {
 
     /**
